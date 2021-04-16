@@ -1,5 +1,5 @@
 /* Importing EleganCSS */
-@import url(http://cdn.jtechnologies.xyz/fonts/inter/inter.css);
+@import url(assets/fonts/inter.css);
 @media (prefers-color-scheme: dark) {
 :root{
   --bw:#212121;
