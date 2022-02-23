@@ -1,0 +1,138 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- <link href="style.css" rel="stylesheet" type="text/plain"/> -->
+    {{ $title := print .Site.Title " | " .Title }}
+    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    <title>{{ $title }}</title>
+    <style>
+    @import url(assets/fonts/inter.css);
+    @media (prefers-color-scheme: dark) {
+        :root{
+        --bw:#212121;
+        --primarycolor: #1847b4;
+        --headersourceurl:url('https://source.unsplash.com/collection/89393741/');
+        }
+    }
+    
+    @media (prefers-color-scheme: light) {
+    :root{
+        --bw:#FFFFFF;
+        --primarycolor: #1847b4;
+        --headersourceurl:url('https://source.unsplash.com/collection/58098712/');
+    }
+    }
+    :root{
+        --bw:#FFFFFF;
+        --primarycolor: #1847b4;
+        --headersourceurl:url();
+    }
+    body{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin:0px 0px 0px 0px;
+        background-color:#212121;
+        min-height: 100vh;
+    }
+    #header{
+    margin:0px 0px 0px 0px;
+        position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    text-align: center;
+    vertical-align: middle;
+    }
+    #header-img{
+    position: absolute;
+    transform: scale(1.1);
+    width: 100vw;
+    height: 100vh;
+        background: url(https://source.unsplash.com/collection/89393741/) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter: blur(12px);
+        -webkit-filter: blur(12px);
+    z-index: -1;
+    }
+    #header-brandmark{
+        position:absolute;
+        top: 50%;
+        margin-top: -50px;
+        width:100vw;
+        /*margin-left: 50%;
+        margin-right: 50%;*/
+    }
+    #header-brandmark h1{
+        font-family: Inter;
+        font-weight: 300;
+        letter-spacing: 6px;
+        font-size:24pt;
+        color: var(--bw);
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        /*margin-left: 50%;
+        margin-right: 50%;*/
+    }
+    #header-brandmark h2{
+        font-family: Inter;
+        font-weight: 300;
+        font-size: .75rem;
+        letter-spacing: 6px;
+        color: var(--bw);
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        /*margin-left: 50%;
+        margin-right: 50%;*/
+    }
+    #header-brandmark-logo{
+        width: 8vh;
+        height: 8vh;
+        src:url('http://jtechnologies.xyz/assets/safari-pinned-tab.svg');
+        bottom: 1vh;
+        /*margin-left: 50%;
+        margin-right: 50%;*/
+    }
+    .article{
+        padding-top: 5vh;
+        padding-left: 2vw;
+        padding-right: 4vw;
+        font-family: Inter;
+        font-weight: 200 !important;
+        color: #FFFFFF;
+    }
+    .article a{
+        font-family: Inter;
+        color: #FFFFFF;
+    }
+    .article p{
+    margin-top:1vh;
+    font-weight: 500;
+    font-size: 1.3em;
+    }
+    #footer{
+        padding-top: 5vh;
+        font-weight: 500;
+        font-family: Inter;
+        text-align: center;
+    
+        color: #efefef;
+    }
+    .rightalign{
+        text-align:right;
+    }
+    /* #partners h1{
+    margin-top:1vh;
+    font-weight: 500;
+    font-size: 1.3em;
+    }*/
+    footer h1{
+        font-size:1em;
+    }
+    </style>
+</head>
